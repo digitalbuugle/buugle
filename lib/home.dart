@@ -16,6 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final Zoom = 10;
 // adding necessary objects
   late Object earth;
   late Object astro;
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "3D Objects in Flutter",
+          "3D AR Model ",
           style: TextStyle(
               color: Colors.greenAccent,
               fontWeight: FontWeight.bold,
@@ -68,7 +69,9 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-
+            const Divider(
+              thickness: 2,
+            ),
             // adding the earth object
             Expanded(
               child: Cube(
@@ -78,7 +81,9 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-
+            const Divider(
+              thickness: 2,
+            ),
             // adding the astro object
             Expanded(
               child: Cube(
